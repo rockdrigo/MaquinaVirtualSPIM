@@ -6,6 +6,7 @@ Maquina virtual de SPIM en lenguaje C, Se incluye compiler para SPIM y varios fi
 
 Maquina Virtual de SPIM en C
 
+EN EL ARCHIVO "Proyecto1.pdf" ESTÁ EXPLICADO A DETALLE EL DESARROLLO DE ESTE PROGEMA
 
 
 
