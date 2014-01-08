@@ -12,14 +12,14 @@ Maquina Virtual de SPIM en C
 --Sobre el programa
 
 La finalidad de este proyecto es que implementen un simulador de una arquitectura de computadora hipotetica especificada en este documento en lenguage C.
-Para poder implementar este simulador es necesario que conozcan las diferentes partes que lo componen y posteriormente lean la especificación dada de la máquina para implementarla fidedignamente. En este caso, van a implementar un int´ erprete del código máquina de la máquina virtual especificada. Para facilitar la programación de dicha máquina se les proporcionará un compilador de un lenguaje ensamblador similar a MIPS al código máquina del simulador que deben implementar.
+Para poder implementar este simulador es necesario que conozcan las diferentes partes que lo componen y posteriormente lean la especificación dada de la máquina para implementarla fidedignamente. En este caso, van a implementar un interprete del código máquina de la máquina virtual especificada. Para facilitar la programación de dicha máquina se les proporcionará un compilador de un lenguaje ensamblador similar a MIPS al código máquina del simulador que deben implementar.
 
 
 --Requerimientos del simulador
 
 El simulador que implementen, además de poder ejecutar programas escritos en el lenguaje de máquina especificado en la sección anterior, deberá implementar las siguientes caracteristicas:
 
-1. Argumentos de linea de comando
+Argumentos de linea de comando
 La invocación de su máquina virtual deberá ser de la forma
 
 $ ./myvm -m 65536 helloworld.bin
