@@ -1,0 +1,22 @@
+Proyecto
+
+Valdivia Carbonell Mariana
+Martinez Rodriguez Rodrigo Ivan
+
+compilar primero programa.h con comando normal
+gcc programa.h
+
+luego compilar el myvm.c pero con output definido
+gcc myvm.c -o svm
+
+y copiar el svm a las carpetas test(aunque ya lo incluyo ahi)
+
+luego,ejecutar el ./test,  en la carpeta mia, ejecutar el test de los archivos a mano, 
+
+
+
+Gracias
+
+
+GPL3
+

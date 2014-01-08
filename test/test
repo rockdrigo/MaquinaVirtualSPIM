@@ -1,0 +1,36 @@
+#!/bin/bash
+PASSED=0
+FAILED=0
+
+echo "Iniciando conjunto de pruebas..."
+echo "Prueba 1 : Operadores aritmeticos"
+./svm -m 1024 inttest.bin > inttest.out
+diff inttest.bvt inttest.out
+if (($? == 0)); then PASSED=$((${PASSED} + 1)); else echo "Caso 1: Fallado"; fi
+echo "Prueba 2 : Operadores de aritmetica flotante"
+./svm -m 1024 fltest.bin > fltest.out
+diff fltest.bvt fltest.out
+if (($? == 0)); then PASSED=$((${PASSED} + 1)); else echo "Caso 2: Fallado";fi
+echo "Prueba 3 : Operadores bitwise"
+./svm -m 1024 bittest.bin > bittest.out
+diff bittest.bvt bittest.out
+if (($? == 0)); then PASSED=$((${PASSED} + 1)); else echo "Caso 3: Fallado";fi
+echo "Prueba 4 : Operadores de salto de instruccion"
+./svm -m 1024 btest.bin > btest.out
+diff btest.bvt btest.out
+if (($? == 0)); then PASSED=$((${PASSED} + 1)); else echo "Caso 4: Fallado";fi
+echo "Prueba 5 : Unidad de memoria"
+./svm -m 1024 memtest.bin > memtest.out
+diff memtest.bvt memtest.out
+if (($? == 0)); then PASSED=$((${PASSED} + 1)); else echo "Caso 5: Fallado";fi
+echo "Prueba 6 : Llamadas al sistema"
+./svm -m 1024 sysctest.bin > sysctest.out < sysctest.in
+diff sysctest.bvt sysctest.out
+if (($? == 0)); then PASSED=$((${PASSED} + 1)); else echo "Caso 6: Fallado";fi
+echo "Prueba 7 : Hola mundo!"
+./svm -m 1024 hello.bin > hello.out
+diff hello.bvt hello.out
+if (($? == 0)); then PASSED=$((${PASSED} + 1)); else echo "Caso 7: Fallado";fi
+echo "Casos pasados: ${PASSED}"
+echo "Casos fallados: ${FAILED}"
+
